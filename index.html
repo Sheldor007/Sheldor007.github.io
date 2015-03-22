@@ -55,8 +55,8 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </div>
 
 
-<div id="this-code-has-been-written-to-perform-the-given-task-on-the-data-provided-to-me-in-a-report-using-a-single-r-markdown-document-that-can-be-processed-by-knitr-and-be-transformed-into-an-html-file.since-the-data-set-has-such-a-great-size-and-we-need-make-a-class-prediction-random-forests-model-is-implemented.-the-test-set-error-is-estimated-internally-during-the-execution.-so-we-proced-with-the-training-the-model-random-forest-with-the-training-data-set.-further-details-are-mentioned-in-the-code.-the-parallel-package-provides-functions-for-parallel-execution-of-r-code-on-machines-with-multiple-cores-or-processors-or-multiple-computers.-it-is-essentially-a-blend-of-the-snow-and-multicore-packages.-by-default-the-doparallel-package-uses-snow-like-functionality.-the-snow-like-functionality-should-work-fine-on-unix-like-systems.-the-error-obtained-is-really-low-which-is-favourable-in-this-case." class="section level3">
-<h3>This code has been written to perform the given task on the data provided to me in a report using a single R markdown document that can be processed by knitr and be transformed into an HTML file.Since the data set has such a great size and we need make a class prediction, random forests model is implemented. The test set error is estimated internally, during the execution. So, we proced with the training the model (Random Forest) with the training data set. Further details are mentioned in the code. The parallel package provides functions for parallel execution of R code on machines with multiple cores or processors or multiple computers. It is essentially a blend of the snow and multicore packages. By default, the doParallel package uses snow-like functionality. The snow-like functionality should work fine on Unix-like systems. The error obtained is really low which is favourable in this case.</h3>
+<div id="this-code-has-been-written-to-perform-the-given-task-on-the-data-provided-to-me-in-a-report-using-a-single-r-markdown-document-that-can-be-processed-by-knitr-and-be-transformed-into-an-html-file.since-the-data-set-has-such-a-great-size-and-we-need-make-a-class-prediction-random-forests-model-is-implemented.-the-test-set-error-is-estimated-internally-during-the-execution.-so-we-proceed-with-the-training-the-model-random-forest-with-the-training-data-set.-further-details-are-mentioned-in-the-code.-the-parallel-package-provides-functions-for-parallel-execution-of-r-code-on-machines-with-multiple-cores-or-processors-or-multiple-computers.-it-is-essentially-a-blend-of-the-snow-and-multicore-packages.-by-default-the-doparallel-package-uses-snow-like-functionality.-the-snow-like-functionality-should-work-fine-on-unix-like-systems.-the-error-obtained-is-really-low-which-is-favourable-in-this-case." class="section level3">
+<h3>This code has been written to perform the given task on the data provided to me in a report using a single R markdown document that can be processed by knitr and be transformed into an HTML file.Since the data set has such a great size and we need make a class prediction, random forests model is implemented. The test set error is estimated internally, during the execution. So, we proceed with the training the model (Random Forest) with the training data set. Further details are mentioned in the code. The parallel package provides functions for parallel execution of R code on machines with multiple cores or processors or multiple computers. It is essentially a blend of the snow and multicore packages. By default, the doParallel package uses snow-like functionality. The snow-like functionality should work fine on Unix-like systems. The error obtained is really low which is favourable in this case.</h3>
 <pre class="r"><code>library(Hmisc)</code></pre>
 <pre><code>## Loading required package: grid
 ## Loading required package: lattice
@@ -313,8 +313,8 @@ confusionMatrix(predict_testing,testing$classe)</code></pre>
 ##           Reference
 ## Prediction    A    B    C    D    E
 ##          A 1394    1    0    0    0
-##          B    1  945    7    0    0
-##          C    0    3  847   10    0
+##          B    1  946    8    0    0
+##          C    0    2  846   10    0
 ##          D    0    0    1  792    1
 ##          E    0    0    0    2  900
 ## 
@@ -331,14 +331,14 @@ confusionMatrix(predict_testing,testing$classe)</code></pre>
 ## Statistics by Class:
 ## 
 ##                      Class: A Class: B Class: C Class: D Class: E
-## Sensitivity            0.9993   0.9958   0.9906   0.9851   0.9989
-## Specificity            0.9997   0.9980   0.9968   0.9995   0.9995
-## Pos Pred Value         0.9993   0.9916   0.9849   0.9975   0.9978
-## Neg Pred Value         0.9997   0.9990   0.9980   0.9971   0.9998
+## Sensitivity            0.9993   0.9968   0.9895   0.9851   0.9989
+## Specificity            0.9997   0.9977   0.9970   0.9995   0.9995
+## Pos Pred Value         0.9993   0.9906   0.9860   0.9975   0.9978
+## Neg Pred Value         0.9997   0.9992   0.9978   0.9971   0.9998
 ## Prevalence             0.2845   0.1935   0.1743   0.1639   0.1837
-## Detection Rate         0.2843   0.1927   0.1727   0.1615   0.1835
-## Detection Prevalence   0.2845   0.1943   0.1754   0.1619   0.1839
-## Balanced Accuracy      0.9995   0.9969   0.9937   0.9923   0.9992</code></pre>
+## Detection Rate         0.2843   0.1929   0.1725   0.1615   0.1835
+## Detection Prevalence   0.2845   0.1947   0.1750   0.1619   0.1839
+## Balanced Accuracy      0.9995   0.9973   0.9933   0.9923   0.9992</code></pre>
 <pre class="r"><code>x &lt;- ed
 x &lt;- x[sets[sets!='classe']]
 answers &lt;- predict(rf, newdata=x)
